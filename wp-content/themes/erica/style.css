@@ -1,0 +1,213 @@
+/*
+	Theme Name: Erica <based on HTML5 Blank>
+	Theme URI: 
+	Description: Tema para o site da designer Erica Leal
+	Version: 0.1
+	Author: Thiago Lima (thiagoaslima@gmail.com) <based on Todd Motto (@toddmotto)>
+	Author URI: 
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+.content, #main {
+    width: 60em;
+    margin: 0 auto;
+    padding-top: 3.75em;
+}
+
+header {
+    height: 7.5em;
+    background-color: #808285;
+}
+
+.content {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+header .content {
+    height: inherit;
+    background-color: #808285;
+}
+
+header h1 {
+    width: 6em;
+    height: 0.9em;
+    margin: 0;
+    margin-right: 10em;
+}
+
+header h1 img {
+    width: 100%;
+    height: 100%;
+}
+
+header nav {
+    font-size: 1em;
+    text-align: right;
+    color: #FFFFFF;
+    float: right;
+}
+
+header nav li {
+    margin-left: 2em;
+}
+header nav a:hover, header nav .selected {
+    color: salmon;
+}
+header nav .selected {
+    font-weight: bold;
+}
+
+header h1, 
+/*header nav, */
+header ul li,
+#sidebar,
+#content {
+    float: left;
+}
+
+#main {
+    padding: 4em 0;
+}
+
+#sidebar {
+    width: 12em;
+    margin-top: -1.125em;
+}
+
+#sidebar h3 {
+    position: relative;
+    text-transform: lowercase;
+    padding-left: 2.7em;
+    cursor: pointer;
+    font-size: 1.125em;
+    font-weight: normal;
+}
+#sidebar h3:hover, #sidebar h3.selected {
+    color: #FFFFFF;
+}
+
+#sidebar h3 .bar {
+    position: absolute;
+    top: 0; bottom: 0; left: 2em;
+    background-color: #C82814;
+    width: 2%;
+    z-index: -1;
+}
+#sidebar h3:hover .bar, #sidebar h3.selected .bar {
+    width: 100%; left: 0;
+}
+
+#sidebar h3:hover {
+    -webkit-transition: color .15s ease-in-out .1s;
+    -moz-transition: color .15s ease-in-out .1s;
+    -o-transition: color .15s ease-in-out .1s;
+    -ms-transition: color .15s ease-in-out .1s;
+    transition: color .15s ease-in-out .1s;
+}
+
+#sidebar h3 .bar {
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+#sidebar ul {
+    font-size: 0.75em;
+    padding-left: 4em;
+    list-style: none;
+    line-height: 1.1em;
+}
+#sidebar ul li {
+    padding: 0.5em 0;
+}
+#sidebar li a:hover {
+    color: #C82814;
+}
+
+
+#content {
+    width: 48em;
+    padding-left: 2em;
+}
+
+.metadata, .dados-trabalho {
+    font-size: 0.875em;
+}
+.dados-trabalho h2 {
+    display: inline;
+    margin: 0;
+    color: #C82814;
+    font-size: 1.142857142857em;
+    font-weight: bold;
+    line-height: 1.225em;
+}
+
+.metadata{
+    padding-top: 1.25em;
+}
+.dados-trabalho {
+    padding-bottom: 1.25em;
+}
+.figure img {
+    display: block;
+    /*width: 100%;*/
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.carousel img {
+    display: inline;
+}
+.mask {
+    position: absolute;
+}
+.crsl-btn {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 5;
+    cursor: pointer;
+}
+.crsl-btn:hover .crsl-inner {
+    background-position-y: -128px;
+}
+.crsl-btn:active .crsl-inner {
+    background-position-y: -256px;
+}
+.crsl-left {
+    left: 0;
+} 
+.crsl-right {
+    right: 0;
+}
+.crsl-inner {
+    position: absolute;
+    top: 35%;
+    width: 64px;
+    height: 128px;
+    background-image: url(img/btn.png);
+    background-repeat: no-repeat;
+}
+.svg .crsl-inner {
+    background-image: url(img/btn.svg);
+    width: 64px;
+    height: 128px;
+}
+.crsl-left .crsl-inner{
+    left: 0;
+    background-position: 0 0;
+}
+.crsl-right .crsl-inner{
+    right: 0;
+    background-position: -64px 0;
+}

@@ -1,0 +1,352 @@
+/* ==========================================================================
+   Import files
+   ========================================================================== */
+
+@import "../scss/normalize.css";
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+$cinza: rgb(102, 102, 102);
+$vermelho: rgb(211, 83, 67);
+
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin w($fsize, $w){
+    width: 1em * ($w / $fsize);
+}
+@mixin h($fsize, $h){
+    height: 1em * ($h / $fsize);
+}
+
+@mixin css3slider( $numImages, $tempo, $timing, $aniName: "slide") {
+    // COMPLETAR
+    -webkit-animation: $aniName $tempo infinite $timing;
+    -moz-animation: $aniName $tempo infinite $timing;
+    -ms-animation: $aniName $tempo infinite $timing;
+    -o-animation: $aniName $tempo infinite $timing;
+    animation: $aniName $tempo infinite $timing;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.box-sizing{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+// MAIN
+header{
+    @extend .box-sizing;
+    background-color: $cinza;
+    padding: (1em*(108/16)) 0 (1em*(54/16)) ((86/1024) * 100%);
+
+    hgroup{
+       @include w(16, 276);
+       @include h(16, 40);
+       background-image: url(i/logo.png);
+       background-size: 100% 100%;
+
+       .svg &{
+            background-image: url(i/logo.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+       } 
+    }
+
+    h1, h2{
+        @extend .visuallyhidden;
+        margin: 0;
+    }
+}
+
+.sections{
+
+    background-color: lighten($cinza, 30%);
+
+    &:hover{
+        background-color: $vermelho;
+        -webkit-transition: background 0.6s;
+        -moz-transition: background 0.6s;
+        -o-transition: background 0.6s;
+        -ms-transition: background 0.6s;
+        transition: background 0.6s;
+
+        a{
+            color: lighten($cinza, 80%);
+            -webkit-transition: color 0.6s;
+            -moz-transition: color 0.6s;
+            -o-transition: color 0.6s;
+            -ms-transition: color 0.6s;
+            transition: color 0.6s;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: $cinza;
+        display: block;
+        -webkit-transition: color 0.6s;
+        -moz-transition: color 0.6s;
+        -o-transition: color 0.6s;
+        -ms-transition: color 0.6s;
+        transition: color 0.6s;
+    }
+}
+
+.nav{
+    @extend .box-sizing;
+    font-size: 14/16 * 1em;
+    line-height: 50/14 * 1em;
+    padding: 0;
+    margin: 0;
+
+    li{
+        width: 100%;
+        margin-top: (8/14) * 1em;
+
+        a{
+            text-indent: (86/1024) * 100%;
+        }
+    }
+}
+
+.slider{
+
+    .home & {
+        margin-top: (40/16) * 1em;
+        height: (240/16) * 1em;
+        width: 100%;
+    }
+
+    ul{
+        list-style: none;
+        height: inherit;
+        width:100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        @extend .clearfix;
+    }
+
+    li{
+        height: inherit;
+        width: 100%;
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% auto;
+
+        &.i1, &.i6{
+            background-image: url("../i/abl.jpg");
+        }
+        &.i2{
+            background-image: url("../i/mario.jpg");
+        }
+        &.i3{
+            background-image: url("../i/ilust.jpg");
+        }
+        &.i4{
+            background-image: url("../i/parcrio.jpg");
+        }
+        &.i5{
+            background-image: url("../i/mario2.jpg");
+        }
+
+        a{
+            display: block;
+            height: inherit;
+            width: 100%;
+        }
+    }
+
+    .cssanimations &{
+        li{
+            -webkit-animation: slide 40s infinite linear;
+            -moz-animation: slide 40s infinite linear;
+            -ms-animation: slide 40s infinite linear;
+            -o-animation: slide 40s infinite linear;
+            animation: slide 40s infinite linear;
+        }
+    }
+
+}
+@keyframes "slide" {
+    0% { left: 0; }
+    15% { left: 0; }
+    20% { left: -100%; }
+    35% { left: -100%; }
+    40% { left: -200%; }
+    55% { left: -200%; }
+    60% { left: -300%; }
+    75% { left: -300%; }
+    80% { left: -400%; }
+    95% { left: -400%; }
+    100% { left: -500%; }
+}
+
+@-moz-keyframes slide {
+    0% { left: 0; }
+    15% { left: 0; }
+    20% { left: -100%; }
+    35% { left: -100%; }
+    40% { left: -200%; }
+    55% { left: -200%; }
+    60% { left: -300%; }
+    75% { left: -300%; }
+    80% { left: -400%; }
+    95% { left: -400%; }
+    100% { left: -500%; }
+}
+
+@-webkit-keyframes "slide" {
+    0% { left: 0; }
+    15% { left: 0; }
+    20% { left: -100%; }
+    35% { left: -100%; }
+    40% { left: -200%; }
+    55% { left: -200%; }
+    60% { left: -300%; }
+    75% { left: -300%; }
+    80% { left: -400%; }
+    95% { left: -400%; }
+    100% { left: -500%; }
+}
+
+@-ms-keyframes "slide" {
+    0% { left: 0; }
+    15% { left: 0; }
+    20% { left: -100%; }
+    35% { left: -100%; }
+    40% { left: -200%; }
+    55% { left: -200%; }
+    60% { left: -300%; }
+    75% { left: -300%; }
+    80% { left: -400%; }
+    95% { left: -400%; }
+    100% { left: -500%; }
+}
+
+@-o-keyframes "slide" {
+    0% { left: 0; }
+    15% { left: 0; }
+    20% { left: -100%; }
+    35% { left: -100%; }
+    40% { left: -200%; }
+    55% { left: -200%; }
+    60% { left: -300%; }
+    75% { left: -300%; }
+    80% { left: -400%; }
+    95% { left: -400%; }
+    100% { left: -500%; }
+}

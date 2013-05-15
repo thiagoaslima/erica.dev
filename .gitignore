@@ -1,0 +1,45 @@
+###Wordpress###
+.htaccess
+wp-*.php
+xmlrpc.php
+wp-admin/
+wp-includes/
+# wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+sitemap.xml
+sitemap.xml.gz
+readme.html
+license.txt
+wp-config.php
+
+###Windows###
+ 
+# Windows image file caches
+Thumbs.db 
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+###SublimeText###
+ 
+# SublimeText project files
+/*.sublime-project
+*.sublime-workspace
+sftp-config*.json
+
+
+###SASS###
+ 
+### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+.sass-cache
+
+

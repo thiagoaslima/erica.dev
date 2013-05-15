@@ -1,0 +1,546 @@
+@import url(../scss/normalize.css);
+/* ==========================================================================
+   Import files
+   ========================================================================== */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 39, ../scss/main.scss */
+.box-sizing, header, .nav {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+ * Image replacement
+ */
+/* line 50, ../scss/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 58, ../scss/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 69, ../scss/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 78, ../scss/main.scss */
+.visuallyhidden, header h1, header h2 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 95, ../scss/main.scss */
+.visuallyhidden.focusable:active, header h1.focusable:active, header h2.focusable:active,
+.visuallyhidden.focusable:focus,
+header h1.focusable:focus,
+header h2.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 108, ../scss/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 125, ../scss/main.scss */
+.clearfix:before, .slider ul:before,
+.clearfix:after,
+.slider ul:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 130, ../scss/main.scss */
+.clearfix:after, .slider ul:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 139, ../scss/main.scss */
+.clearfix, .slider ul {
+  *zoom: 1;
+}
+
+/* line 145, ../scss/main.scss */
+header {
+  background-color: #666666;
+  padding: 6.75em 0 3.375em 8.39844%;
+}
+/* line 150, ../scss/main.scss */
+header hgroup {
+  width: 17.25em;
+  height: 2.5em;
+  background-image: url(i/logo.png);
+  background-size: 100% 100%;
+}
+/* line 156, ../scss/main.scss */
+.svg header hgroup {
+  background-image: url(i/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* line 163, ../scss/main.scss */
+header h1, header h2 {
+  margin: 0;
+}
+
+/* line 169, ../scss/main.scss */
+.sections {
+  background-color: #b3b3b3;
+}
+/* line 173, ../scss/main.scss */
+.sections:hover {
+  background-color: #d35343;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+  -o-transition: background 0.6s;
+  -ms-transition: background 0.6s;
+  transition: background 0.6s;
+}
+/* line 181, ../scss/main.scss */
+.sections:hover a {
+  color: white;
+  -webkit-transition: color 0.6s;
+  -moz-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  -ms-transition: color 0.6s;
+  transition: color 0.6s;
+}
+/* line 191, ../scss/main.scss */
+.sections a {
+  text-decoration: none;
+  color: #666666;
+  display: block;
+  -webkit-transition: color 0.6s;
+  -moz-transition: color 0.6s;
+  -o-transition: color 0.6s;
+  -ms-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+/* line 203, ../scss/main.scss */
+.nav {
+  font-size: 0.875em;
+  line-height: 3.57143em;
+  padding: 0;
+  margin: 0;
+}
+/* line 210, ../scss/main.scss */
+.nav li {
+  width: 100%;
+  margin-top: 0.57143em;
+}
+/* line 214, ../scss/main.scss */
+.nav li a {
+  text-indent: 8.39844%;
+}
+
+/* line 222, ../scss/main.scss */
+.home .slider {
+  margin-top: 2.5em;
+  height: 15em;
+  width: 100%;
+}
+/* line 228, ../scss/main.scss */
+.slider ul {
+  list-style: none;
+  height: inherit;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* line 239, ../scss/main.scss */
+.slider li {
+  height: inherit;
+  width: 100%;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}
+/* line 250, ../scss/main.scss */
+.slider li.i1, .slider li.i6 {
+  background-image: url("../i/abl.jpg");
+}
+/* line 253, ../scss/main.scss */
+.slider li.i2 {
+  background-image: url("../i/mario.jpg");
+}
+/* line 256, ../scss/main.scss */
+.slider li.i3 {
+  background-image: url("../i/ilust.jpg");
+}
+/* line 259, ../scss/main.scss */
+.slider li.i4 {
+  background-image: url("../i/parcrio.jpg");
+}
+/* line 262, ../scss/main.scss */
+.slider li.i5 {
+  background-image: url("../i/mario2.jpg");
+}
+/* line 266, ../scss/main.scss */
+.slider li a {
+  display: block;
+  height: inherit;
+  width: 100%;
+}
+/* line 274, ../scss/main.scss */
+.cssanimations .slider li {
+  -webkit-animation: slide 40s infinite linear;
+  -moz-animation: slide 40s infinite linear;
+  -ms-animation: slide 40s infinite linear;
+  -o-animation: slide 40s infinite linear;
+  animation: slide 40s infinite linear;
+}
+
+@keyframes "slide" {
+  /* line 285, ../scss/main.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 286, ../scss/main.scss */
+  15% {
+    left: 0;
+  }
+
+  /* line 287, ../scss/main.scss */
+  20% {
+    left: -100%;
+  }
+
+  /* line 288, ../scss/main.scss */
+  35% {
+    left: -100%;
+  }
+
+  /* line 289, ../scss/main.scss */
+  40% {
+    left: -200%;
+  }
+
+  /* line 290, ../scss/main.scss */
+  55% {
+    left: -200%;
+  }
+
+  /* line 291, ../scss/main.scss */
+  60% {
+    left: -300%;
+  }
+
+  /* line 292, ../scss/main.scss */
+  75% {
+    left: -300%;
+  }
+
+  /* line 293, ../scss/main.scss */
+  80% {
+    left: -400%;
+  }
+
+  /* line 294, ../scss/main.scss */
+  95% {
+    left: -400%;
+  }
+
+  /* line 295, ../scss/main.scss */
+  100% {
+    left: -500%;
+  }
+}
+
+@-moz-keyframes slide {
+  /* line 299, ../scss/main.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 300, ../scss/main.scss */
+  15% {
+    left: 0;
+  }
+
+  /* line 301, ../scss/main.scss */
+  20% {
+    left: -100%;
+  }
+
+  /* line 302, ../scss/main.scss */
+  35% {
+    left: -100%;
+  }
+
+  /* line 303, ../scss/main.scss */
+  40% {
+    left: -200%;
+  }
+
+  /* line 304, ../scss/main.scss */
+  55% {
+    left: -200%;
+  }
+
+  /* line 305, ../scss/main.scss */
+  60% {
+    left: -300%;
+  }
+
+  /* line 306, ../scss/main.scss */
+  75% {
+    left: -300%;
+  }
+
+  /* line 307, ../scss/main.scss */
+  80% {
+    left: -400%;
+  }
+
+  /* line 308, ../scss/main.scss */
+  95% {
+    left: -400%;
+  }
+
+  /* line 309, ../scss/main.scss */
+  100% {
+    left: -500%;
+  }
+}
+
+@-webkit-keyframes "slide" {
+  /* line 313, ../scss/main.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 314, ../scss/main.scss */
+  15% {
+    left: 0;
+  }
+
+  /* line 315, ../scss/main.scss */
+  20% {
+    left: -100%;
+  }
+
+  /* line 316, ../scss/main.scss */
+  35% {
+    left: -100%;
+  }
+
+  /* line 317, ../scss/main.scss */
+  40% {
+    left: -200%;
+  }
+
+  /* line 318, ../scss/main.scss */
+  55% {
+    left: -200%;
+  }
+
+  /* line 319, ../scss/main.scss */
+  60% {
+    left: -300%;
+  }
+
+  /* line 320, ../scss/main.scss */
+  75% {
+    left: -300%;
+  }
+
+  /* line 321, ../scss/main.scss */
+  80% {
+    left: -400%;
+  }
+
+  /* line 322, ../scss/main.scss */
+  95% {
+    left: -400%;
+  }
+
+  /* line 323, ../scss/main.scss */
+  100% {
+    left: -500%;
+  }
+}
+
+@-ms-keyframes "slide" {
+  /* line 327, ../scss/main.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 328, ../scss/main.scss */
+  15% {
+    left: 0;
+  }
+
+  /* line 329, ../scss/main.scss */
+  20% {
+    left: -100%;
+  }
+
+  /* line 330, ../scss/main.scss */
+  35% {
+    left: -100%;
+  }
+
+  /* line 331, ../scss/main.scss */
+  40% {
+    left: -200%;
+  }
+
+  /* line 332, ../scss/main.scss */
+  55% {
+    left: -200%;
+  }
+
+  /* line 333, ../scss/main.scss */
+  60% {
+    left: -300%;
+  }
+
+  /* line 334, ../scss/main.scss */
+  75% {
+    left: -300%;
+  }
+
+  /* line 335, ../scss/main.scss */
+  80% {
+    left: -400%;
+  }
+
+  /* line 336, ../scss/main.scss */
+  95% {
+    left: -400%;
+  }
+
+  /* line 337, ../scss/main.scss */
+  100% {
+    left: -500%;
+  }
+}
+
+@-o-keyframes "slide" {
+  /* line 341, ../scss/main.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 342, ../scss/main.scss */
+  15% {
+    left: 0;
+  }
+
+  /* line 343, ../scss/main.scss */
+  20% {
+    left: -100%;
+  }
+
+  /* line 344, ../scss/main.scss */
+  35% {
+    left: -100%;
+  }
+
+  /* line 345, ../scss/main.scss */
+  40% {
+    left: -200%;
+  }
+
+  /* line 346, ../scss/main.scss */
+  55% {
+    left: -200%;
+  }
+
+  /* line 347, ../scss/main.scss */
+  60% {
+    left: -300%;
+  }
+
+  /* line 348, ../scss/main.scss */
+  75% {
+    left: -300%;
+  }
+
+  /* line 349, ../scss/main.scss */
+  80% {
+    left: -400%;
+  }
+
+  /* line 350, ../scss/main.scss */
+  95% {
+    left: -400%;
+  }
+
+  /* line 351, ../scss/main.scss */
+  100% {
+    left: -500%;
+  }
+}
