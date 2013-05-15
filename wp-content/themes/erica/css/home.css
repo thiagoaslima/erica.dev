@@ -79,15 +79,21 @@ header nav .selected {
 .slider {
 	height: 20em;
 	margin-top: 1em;
+	overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
 }
 
 .slider ul {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	list-style: none;
-	overflow: hidden;
+    position: relative;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    white-space: nowrap;
 }
 
 .slider li {
@@ -95,6 +101,9 @@ header nav .selected {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 
 .slider a {
@@ -102,7 +111,7 @@ header nav .selected {
 }
 .slider a span {
 	position: absolute;
-	right: 4em;
+	right: 10%;
 	bottom: 1em;
 	font-family: Georgia, serif;
 	font-style: italic;

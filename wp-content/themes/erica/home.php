@@ -31,8 +31,8 @@
 	     }
 	?>
 
-	<div class="slider">
-        <ul>
+	<div class="slider clearfix">
+        <ul class="clearfix">
            <?php
            $qtde = count($images);
            $w = 100 / $qtde . '%'; 
@@ -49,4 +49,4 @@
         
     </div>
 
-    <?php get_footer(); ?>
+    <?php get_footer('home'); ?>
